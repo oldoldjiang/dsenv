@@ -14,6 +14,14 @@ sudo apt-get -y install libhdf5-dev
 
 sudo apt -y install cmake
 sudo apt -y install vim
+sudo apt -y install curl
+
+
+# install anaconda3
+curl -O https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+
+bash Anaconda3-5.2.0-Linux-x86_64.sh # TODO: skip the license pages
+source ~/.bashrc
 
 # install Rstudio
 sudo apt -y install gdebi-core
