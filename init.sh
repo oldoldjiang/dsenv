@@ -5,7 +5,7 @@ sudo apt-get -y install libssl-dev libcurl4-openssl-dev
 sudo apt-get -y install libxml2-dev libzmq3-dev libpq-dev
 sudo apt-get -y install libhdf5-dev
 
-
+sudo apt -y install cmake
 
 # install Rstudio
 sudo apt -y install gdebi-core
@@ -30,6 +30,12 @@ install.packages('lubridate')
 install.packages('plyr')
 install.packages('reshape2')
 install.packages('profvis')
+install.packages('jsonlite')
+install.packages('rredis')
+install.packages('mongolite')
+install.packages('knitr')
+install.packages('roxygen2') # error
+install.packages('devtools')
 EOF
 
 
