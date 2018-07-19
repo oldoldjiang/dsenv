@@ -10,12 +10,11 @@ sudo apt-get -y install r-base
 sudo apt-get -y install r-base-dev
 sudo apt-get -y install libssl-dev libcurl4-openssl-dev
 sudo apt-get -y install libxml2-dev libzmq3-dev libpq-dev
-sudo apt-get -y install libhdf5-dev
+
 
 sudo apt -y install cmake
 sudo apt -y install vim
 sudo apt -y install curl
-
 
 # install anaconda3
 curl -O https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh
@@ -34,6 +33,15 @@ y
 EOF
 
 
+# install h5
+cd ~/Downloads
+wget https://support.hdfgroup.org/ftp/HDF5/current/src/hdf5-1.10.1.tar
+tar -xvf hdf5-1.10.1.tar
+cd hdf5-1.10.1/
+make
+sudo apt-get -y install libhdf5-dev
+
+
 # install R packages
 R --no-save << EOF
 options(repos=structure(c(CRAN="https://cran.cnr.berkeley.edu/")))
@@ -50,7 +58,8 @@ install.packages('jsonlite')
 install.packages('rredis')
 install.packages('mongolite')
 install.packages('knitr')
-install.packages('roxygen2') # error
+install.packages('h5')       # require hdf5
+install.packages('roxygen2') # require curl
 install.packages('devtools')
 EOF
 
