@@ -46,6 +46,10 @@ sudo apt-get -y install libhdf5-dev
 R --no-save << EOF
 options(repos=structure(c(CRAN="https://cran.cnr.berkeley.edu/")))
 install.packages('gbm')
+install.packages('e1071')
+install.packages('nnet')
+install.packages('abind')
+install.packages('glmnet')
 install.packages('xts')
 install.packages('ggplot')
 install.packages('Rcpp')
