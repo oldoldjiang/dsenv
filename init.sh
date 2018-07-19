@@ -64,5 +64,6 @@ install.packages('devtools')
 EOF
 
 
-
+# install redis
+sudo apt-get -y install redis-server
 
