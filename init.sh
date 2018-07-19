@@ -74,9 +74,8 @@ install.packages('h5')       # require hdf5
 install.packages('roxygen2') # require curl
 install.packages('devtools')
 install.packages('caret')
-install.packages('mice')
 install.packages('RcppRoll')
-install.packages('RMySQL')
+install.packages('RMySQL')   # require libmysqlclient-dev
 install.packages('rvest')
 EOF
 
