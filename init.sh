@@ -89,3 +89,9 @@ sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
+
+# install Chrome
+cd Downloads
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install libappindicator1 libdbusmenu-glib4 libdbusmenu-gtk4 libindicator7 libpango1.0-0 libpangox-1.0-0
+sudo dpkg -i google-chrome-stable_current_amd64.deb
