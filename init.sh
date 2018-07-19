@@ -40,7 +40,10 @@ tar -xvf hdf5-1.10.1.tar
 cd hdf5-1.10.1/
 make
 sudo apt-get -y install libhdf5-dev
-
+# R --no-save << EOF
+# source('http://bioconductor.org/biocLite.R')
+# biocLite('hdf5')
+# EOF
 
 # install R packages
 R --no-save << EOF
