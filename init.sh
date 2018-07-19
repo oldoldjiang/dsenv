@@ -13,6 +13,7 @@ sudo apt-get -y install libxml2-dev libzmq3-dev libpq-dev
 sudo apt-get -y install libhdf5-dev
 
 sudo apt -y install cmake
+sudo apt -y install vim
 
 # install Rstudio
 sudo apt -y install gdebi-core
