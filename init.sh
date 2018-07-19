@@ -10,6 +10,15 @@ cd Downloads
 wget https://download1.rstudio.org/rstudio-xenial-1.1.453-amd64.deb
 gdebi rstudio-xenial-1.1.453-amd64.deb
 
+
+# install R packages
+R --no-save << EOF
+options(repos=structure(c(CRAN="https://cran.cnr.berkeley.edu/")))
+install.packages('gbm')
+EOF
+
+
+
 sudo apt-get -y install mysql-server
 sudo apt -y install mysql-client
 sudo apt -y install libmysqlclient-dev
