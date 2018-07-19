@@ -1,3 +1,10 @@
+# install Mysql
+sudo apt-get -y install mysql-server
+sudo apt -y install mysql-client
+sudo apt -y install libmysqlclient-dev
+
+
+
 sudo apt-get update
 sudo apt-get -y install r-base
 sudo apt-get -y install r-base-dev
@@ -40,6 +47,4 @@ EOF
 
 
 
-sudo apt-get -y install mysql-server
-sudo apt -y install mysql-client
-sudo apt -y install libmysqlclient-dev
+
