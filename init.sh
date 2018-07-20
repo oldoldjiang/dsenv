@@ -16,12 +16,6 @@ sudo apt -y install cmake
 sudo apt -y install vim
 sudo apt -y install curl
 
-# install anaconda3
-curl -O https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh
-
-bash Anaconda3-5.2.0-Linux-x86_64.sh # TODO: skip the license pages
-source ~/.bashrc
-
 # install Rstudio
 sudo apt -y install gdebi-core
 cd ~
@@ -79,6 +73,12 @@ install.packages('RMySQL')   # require libmysqlclient-dev
 install.packages('rvest')
 EOF
 
+# install anaconda3
+# warning: please do not install anaconda before installing libhdf5-dev and r h5 library
+curl -O https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+
+bash Anaconda3-5.2.0-Linux-x86_64.sh # TODO: skip the license pages
+source ~/.bashrc
 
 # install redis
 sudo apt-get -y install redis-server
