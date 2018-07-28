@@ -2,8 +2,8 @@
 sudo apt-get -y install mysql-server
 sudo apt -y install mysql-client
 sudo apt -y install libmysqlclient-dev
-
-
+sudo apt-get -y install libctemplate0 libzip1 python-pysqlite2 python-crypto python-paramiko
+sudo apt-get -y install mysql-workbench
 
 sudo apt-get update
 sudo apt-get -y install r-base
