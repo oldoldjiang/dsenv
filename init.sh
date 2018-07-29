@@ -11,6 +11,16 @@ sudo apt-get -y install r-base-dev
 sudo apt-get -y install libssl-dev libcurl4-openssl-dev
 sudo apt-get -y install libxml2-dev libzmq3-dev libpq-dev
 
+# install sougou yinpin
+sudo add-apt-repository ppa:fcitx-team/nightly
+sudo apt-get -y install fcitx
+sudo apt-get -f install
+sudo apt-get -y install fcitx fcitx-config-gtk fcitx-table-all im-switch
+wget http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb?st=DW_Rcvt6-Bz30bPL66UoRQ&e=1532826228&fn=sogoupinyin_2.2.0.0108_amd64.deb
+sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+# setting->language support-> Keyboard input method system(set to fcitx) -> reboot system
+# seting ->Text Entry -> + sougou pinyin
+
 
 sudo apt -y install cmake
 sudo apt -y install vim
