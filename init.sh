@@ -83,6 +83,24 @@ install.packages('RMySQL')   # require libmysqlclient-dev
 install.packages('rvest')
 EOF
 
+# install Java
+sudo mkdir /usr/java/
+cd /usr/java
+sudo wget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz
+sudo tar -xzvf jdk-8u181-linux-x64.tar.gz
+sudo rm jdk-8u181-linux-x64.tar.gz
+sudo sed -i '$a\export JAVA_HOME=/usr/java/jdk1.8.0_181\nexport JRE_HOME=/usr/java/jdk1.8.0_181/jre\nexport CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH\nexport PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH\n' /etc/profile
+source /etc/profile
+R CMD javareconf -e
+
+# install rJava and mailR
+R --no-save << EOF
+options(repos=structure(c(CRAN="https://cran.cnr.berkeley.edu/")))
+install.packages('mailR')
+EOF
+
+
+
 # install anaconda3
 # warning: please do not install anaconda before installing libhdf5-dev and r h5 library
 curl -O https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh
