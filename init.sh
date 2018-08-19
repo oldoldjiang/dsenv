@@ -49,6 +49,8 @@ sudo apt-get -y install libhdf5-dev
 # biocLite('hdf5')
 # EOF
 
+sudo apt install libsasl2-dev # for R package mongolite
+
 # install R packages
 R --no-save << EOF
 options(repos=structure(c(CRAN="https://cran.cnr.berkeley.edu/")))
