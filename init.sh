@@ -110,6 +110,12 @@ curl -O https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 bash Anaconda3-5.2.0-Linux-x86_64.sh # TODO: skip the license pages
 source ~/.bashrc
 
+# install R packages
+R --no-save << EOF
+options(repos=structure(c(CRAN="https://cran.cnr.berkeley.edu/")))
+install.packages('reticulate')
+EOF
+
 # install redis
 sudo apt-get -y install redis-server
 
